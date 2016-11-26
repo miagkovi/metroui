@@ -52,6 +52,11 @@ IMPORT
 
 @import url("normalize.css");
 
+@font-face {
+	font-family: HelveticaNeue;
+	src: url(../fonts/HelveticaNeue-UltraLight.otf);
+}
+
 /*=============================
 MAIN
 =============================*/
@@ -59,14 +64,22 @@ MAIN
 body {
 	background-image: url(../img/bg.png);
 	background-repeat: repeat;
+	color: #ffffff;
+	font-family: HelveticaNeue;
+	letter-spacing: .5px;
 }
 
 header {
-	margin: 75px 5px;
+	margin: 50px 5px;
+}
+
+header h1 {
+	font-size: 65px;
 }
 
 a {
 	text-decoration: none;
+	color: #ffffff;
 }
 
 .menu {
@@ -98,7 +111,7 @@ a {
 	left: 10px;
 	bottom: 10px;
 	margin: 0px;
-	font-size: 16px;
+	font-size: 18px;
 }
 
 .home {
@@ -195,6 +208,12 @@ footer {
 	position: relative;
 }
 
+.copyrights p,
+.copyrights a {
+	font-size: 14px;
+	color: #99a4c1;
+}
+
 .copyrights p {
 	position: absolute;
 	right: 0px;
@@ -204,9 +223,12 @@ footer {
 @media (max-width: 960px) {
 
 	header {
-		margin: 50px 5px;
+		margin: 25px 5px;
 	}
 
+	header h1 {
+		font-size: 45px;
+	}
 
 	.container {
 		width: 640px;
@@ -226,10 +248,17 @@ footer {
 
 @media (max-width: 680px) {
 
-	header {
-		margin: 25px 5px;
+	body {
+		background-image: url(../img/bg-mob.png);
 	}
 
+	header {
+		margin: 5px 5px;
+	}
+
+	header h1 {
+		font-size: 25px;
+	}
 
 	.container {
 		width: 320px;
