@@ -70,11 +70,15 @@ body {
 }
 
 header {
-	margin: 50px 5px;
+	margin: 100px 5px;
 }
 
 header h1 {
 	font-size: 65px;
+}
+
+header a {
+	color: #99a4c1;
 }
 
 a {
@@ -208,7 +212,6 @@ footer {
 	position: relative;
 }
 
-.copyrights p,
 .copyrights a {
 	font-size: 14px;
 	color: #99a4c1;
@@ -218,12 +221,33 @@ footer {
 	position: absolute;
 	right: 0px;
 	top: 40px;
+	font-size: 14px;
 }
+
+.twitter-timeline {
+	min-height: 152px !important;
+}
+
+.hover {
+	transition: top 0.5s;
+}
+
+.hover:hover {
+    top: -5px;
+}
+
+.hover:active {
+	color: #000000;
+}
+
+/*=============================
+MEDIA QUERIES
+=============================*/
 
 @media (max-width: 960px) {
 
 	header {
-		margin: 25px 5px;
+		margin: 50px 5px;
 	}
 
 	header h1 {
@@ -231,17 +255,17 @@ footer {
 	}
 
 	.container {
-		width: 640px;
+		width: 610px;
 	}
 
 	.portfolio {
-		background-color: #d3573e;
-		width: 310px;
+		width: 280px; /*310*/
 	}
 
-	.app {
-		width: 470px;
+	.hire {
+		width: 280px; /*310*/
 	}
+
 
 }
 
@@ -272,6 +296,14 @@ footer {
 		width: 310px;
 	}
 
+	.portfolio {
+		width: 310px; /*310*/
+	}
+
+	.hire {
+		width: 310px; /*310*/
+	}
+
 	.social a img {
 		margin: 5px 5px;
 		height: 75px;
@@ -287,6 +319,14 @@ footer {
 		position: static;
 		text-align: center;
 		margin-bottom: 5px;
+	}
+
+	header h1::after {
+		content: " Mobile ";
+		font-size: 12.5px;
+		font-style: italic;
+		letter-spacing: 2px;
+		color: #99a4c1;
 	}
 
 }
