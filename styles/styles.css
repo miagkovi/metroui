@@ -1,107 +1,48 @@
 /*=============================
-RESET
+Bulletproof @Font-Face Syntax
 =============================*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-/*=============================
-IMPORT
-=============================*/
-
-@import url("normalize.css");
-
 @font-face {
-	font-family: HelveticaNeue;
-	src: url(../fonts/HelveticaNeue-UltraLight.otf);
+	font-family: 'Helvetica Neue';
+	src: url('../fonts/HelveticaNeue-UltraLight.eot?#iefix') format('embedded-opentype'), 
+	     url('../fonts/HelveticaNeue-UltraLight.otf') format('opentype');
 }
-
 /*=============================
-MAIN
+MAIN STYLES
 =============================*/
-
 body {
 	background-image: url(../img/bg.png);
 	background-repeat: repeat;
 	color: #ffffff;
-	font-family: HelveticaNeue;
+	font-family: 'Helvetica Neue';
 	letter-spacing: .5px;
+	box-sizing: border-box;
 }
-
 header {
 	margin: 100px 5px;
 }
-
-header h1 {
+h1 {
 	font-size: 65px;
 }
-
 header a {
 	color: #99a4c1;
 }
-
 a {
 	text-decoration: none;
 	color: #ffffff;
 }
-
 .menu {
-	font-size: 0px;
+	font-size: 0; /*illuminate extra margin*/
+	display: table; /*for safari browser*/
 }
-
 .container {
 	width: 930px;
 	margin: 0 auto;
-
 }
-
 .single-box {
 	width: 150px;
 	height: 150px;
 	margin: 5px;
 }
-
 .link {
     width: 100%;
     height: 100%;
@@ -109,35 +50,29 @@ a {
     left: 0;
     top: 0;
 }
-
 .txt {
 	position: absolute;
 	left: 10px;
 	bottom: 10px;
-	margin: 0px;
+	margin: 0;
 	font-size: 18px;
 }
-
 .home {
 	background-color: #3387ea;
 	background-image: url(../img/home.png);
 	background-repeat: no-repeat;
 	background-position: center;
-	display: inline-block;
 	float: left;
 	position: relative;
 }
-
 .about {
 	background-color: #f9be3e;
 	background-image: url(../img/about.png);
 	background-repeat: no-repeat;
 	background-position: center;
-	display: inline-block;
 	float: left;
 	position: relative;
 }
-
 .portfolio {
 	background-color: #d3573e;
 	width: 280px;
@@ -146,21 +81,17 @@ a {
 	background-image: url(../img/portfolio.png);
 	background-repeat: no-repeat;
 	background-position: center;
-	display: inline-block;
 	float: left;
 	position: relative;
 }
-
 .photos {
 	background-color: #59b0e2;
 	background-image: url(../img/photos.png);
 	background-repeat: no-repeat;
 	background-position: center;
-	display: inline-block;
 	float: left;
 	position: relative;
 }
-
 .testimonials {
 	background-color: #33af95;
 	background-image: url(../img/testimonials.png);
@@ -169,7 +100,6 @@ a {
 	display: inline-block;
 	position: relative;
 }
-
 .hire {
 	background-color: #86a73f;
 	width: 310px;
@@ -178,20 +108,16 @@ a {
 	background-image: url(../img/hire.png);
 	background-repeat: no-repeat;
 	background-position: center;
-	display: inline-block;
 	float: left;
 	position: relative;
 }
-
 .app {
 	background-color: #151a26;
 	width: 440px;
 	height: 150px;
 	margin: 5px;
-	display: inline-block;
 	float: left;
 }
-
 .contact {
 	background-color: #7e5b8c;
 	background-image: url(../img/contact.png);
@@ -200,133 +126,112 @@ a {
 	display: inline-block;
 	position: relative;
 }
-
 .social a img {
 	margin: 5px;
 	height: 75px;
 	width: 75px;
 	float: left;
 }
-
 footer {
 	position: relative;
 }
-
 .copyrights a {
 	font-size: 14px;
 	color: #99a4c1;
 }
-
 .copyrights p {
 	position: absolute;
-	right: 0px;
+	right: 0;
 	top: 40px;
 	font-size: 14px;
 }
-
 .twitter-timeline {
 	min-height: 152px !important;
 }
-
 .hover {
 	transition: top 0.5s;
 }
-
 .hover:hover {
     top: -5px;
 }
-
 .hover:active {
 	color: #000000;
 }
-
 /*=============================
 MEDIA QUERIES
 =============================*/
-
 @media (max-width: 960px) {
-
 	header {
 		margin: 50px 5px;
 	}
-
-	header h1 {
+	h1 {
 		font-size: 45px;
 	}
-
 	.container {
 		width: 610px;
 	}
-
 	.portfolio {
-		width: 280px; /*310*/
+		width: 280px;
 	}
-
+	.contact {
+		float: right;
+	}
 	.hire {
-		width: 280px; /*310*/
+		width: 280px;
 	}
-
-
+	/*---unknown error in firefox solvation---*/
+	@-moz-document url-prefix() { 
+		.hire {
+			width: 279.5px;
+		}
+	}
+	/*---/unknown error in firefox solvation---*/
 }
-
-
 @media (max-width: 680px) {
-
 	body {
 		background-image: url(../img/bg-mob.png);
 	}
-
 	header {
 		margin: 5px 5px;
 	}
-
-	header h1 {
-		font-size: 25px;
+	h1 {
+		font-size: 24px;
 	}
-
 	.container {
 		width: 320px;
 	}
-
 	.app {
 		display: none;
 	}
-
 	.contact {
 		width: 310px;
 	}
-
 	.portfolio {
-		width: 310px; /*310*/
+		width: 310px;
 	}
-
 	.hire {
-		width: 310px; /*310*/
+		width: 310px;
 	}
-
 	.social a img {
 		margin: 5px 5px;
 		height: 75px;
 		width: 75px;
 		float: left;
 	}
-
 	.social a:nth-child(2) img {
 		margin: 5px 37.5px;
 	}
-
 	.copyrights p {
 		position: static;
 		text-align: center;
+		margin-top: 0;
 		margin-bottom: 5px;
 	}
-
-	header h1::after {
+	h1::after {
 		content: " Mobile ";
 		font-size: 12.5px;
 		font-style: italic;
 		letter-spacing: 2px;
 		color: #99a4c1;
 	}
-
 }
